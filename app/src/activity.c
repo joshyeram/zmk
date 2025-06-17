@@ -92,7 +92,7 @@ void activity_work_handler(struct k_work *work) {
         {
             set_state(ZMK_ACTIVITY_IDLE);
         }
-        if (inactive_time > MAX_SLEEP_MS) 
+        if (inactive_time > MAX_IDLE_MS * 5) 
         {
             set_state(ZMK_ACTIVITY_PAST_IDLE);
         }
