@@ -173,6 +173,7 @@ int display_event_handler(const zmk_event_t *eh) {
         break;
     case ZMK_ACTIVITY_IDLE:
     case ZMK_ACTIVITY_SLEEP:
+    case ZMK_ACTIVITY_PAST_IDLE:
         stop_display_updates();
         break;
     default:
