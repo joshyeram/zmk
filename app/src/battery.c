@@ -161,6 +161,7 @@ static int battery_event_listener(const zmk_event_t *eh) {
             return 0;
         case ZMK_ACTIVITY_IDLE:
         case ZMK_ACTIVITY_SLEEP:
+        case ZMK_ACTIVITY_PAST_IDLE:
             k_timer_stop(&battery_timer);
             return 0;
         default:
